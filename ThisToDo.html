@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+    <link rel="stylesheet" href="pagestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+    wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;
+    1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>GG Travel</title>
+</head>
+<body>
+<section>
+    <nav>
+        <a href="index.html"><img class="website-logo" src="images/logo3.png" alt="Website Logo"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="VisitorGuide.html">Visitor Guide</a></li>
+                <li><a href="http://localhost/ThisToDo.html">Things To Do</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</section>
+<section class="banner">
+    <img src="https://www.oktravelgeorgia.ge/uploads/post/thumbs/48_1.jpg" alt="Banner">
+</section>
+<section class="list">
+    <h1>Best Things to Do in Georgia <br> (Europe)</h1>
+    <h2>Soak Up Tbilisi’s Old Town</h2>
+    <img src="https://travellemming.com/wp-content/uploads/Old-Town-of-Tbilisi-Georgia.jpg">
+    <p>For most travelers, Georgia’s capital Tbilisi will be the first stop in the country. And with so many incredible things to do in Tbilisi, you could even spend your entire Georgian vacation in this awesome city.
+    </p>
+    <p>The highlight of any visit to Tbilisi is a stroll through the Old Town. Ancient churches, monuments, and buildings are set against a dramatic hillside. You can climb to the top or zip up via a modern cable car. And if your bones ache from all that walking, you can literally soak in the city at the thermal springs located right in the middle of Tbilisi’s Old Town.
+    </p>
+    <p>Cross a bridge and on the other side of the Kura river you’ll find incredible modern architecture, which makes for an interesting juxtaposition against Old Town. The best way to take in Tbilisi’s Old Town is to join a free walking tour.
+        👉 Pro Tip: Tbilisi traffic can be a pain. Make sure you book your hotel in Old Tbilisi or any of the surrounding neighborhoods (like Vake, Sololaki, or Rustaveli). Here’s a map of those areas courtesy of Booking.com. Personally, I think you can’t go wrong with the Rooms Hotel Tbilisi.
+    </p>
+    <h2>Attend a Traditional Supra</h2>
+    <img src="https://travellemming.com/wp-content/uploads/Georgia8.11webactual11.jpg">
+    <p>A supra is basically a traditional Georgian feast. Picture plate after plate of delicious Georgian cuisine served up in a Georgian home, all while copious amounts of homemade wine is poured until late into the evening. It’s a can’t miss experience in Georgia.
+    </p>
+    <p>When locals attend a supra, its through invites from friends. That’s hard if you don’t speak Georgian, especially given the ongoing health crisis. The easiest way around that is to snag a ticket to the highly-rated Georgian Folk Show and Supra, which is limited to just 10 tickets per show. Or you can still learn how to create the supra experience yourself in a small group cooking class at Nana’s Kitchen.
+    </p>
+
+
+    <div id="showmorediv">
+
+    </div>
+   <button id="show-more-btn">Show More</button>
+</section>
+
+</body>
+<script>
+    $(document).ready(function(){
+        $("#show-more-btn").click(function(){
+            $.ajax({url: "moreinfo.txt", success: function(result){
+                    $("#showmorediv").html(result);
+                }});
+        });
+    });
+</script>
+</html>
